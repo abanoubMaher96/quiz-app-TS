@@ -1,0 +1,69 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+.App {
+  background-image: url("./images/nattu-adnan-unsplash.jpeg");
+  height: 100vh;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.App h1 {
+  /* font-family: "Fascinate Inline"; */
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(135, 241, 255));
+  font-weight: 400;
+  background-size: 100%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 70px;
+  margin: 20px;
+}
+.App .start {
+  cursor: pointer;
+  background: linear-gradient(rgb(255, 255, 255), rgb(255, 204, 145));
+  border: 2px solid rgb(211, 133, 88);
+  box-shadow: rgb(0 0 0 / 25%) 0px 5px 10px;
+  border-radius: 10px;
+  height: 40px;
+  margin: 20px 0px;
+  padding: 0px 40px;
+}
