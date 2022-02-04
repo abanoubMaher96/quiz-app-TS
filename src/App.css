@@ -57,7 +57,21 @@
   font-size: 70px;
   margin: 20px;
 }
+.App h5 {
+  color: white;
+  font-size: 25px;
+}
 .App .start {
+  cursor: pointer;
+  background: linear-gradient(rgb(255, 255, 255), rgb(255, 204, 145));
+  border: 2px solid rgb(211, 133, 88);
+  box-shadow: rgb(0 0 0 / 25%) 0px 5px 10px;
+  border-radius: 10px;
+  height: 40px;
+  margin: 20px 0px;
+  padding: 0px 40px;
+}
+.App .nextBtn {
   cursor: pointer;
   background: linear-gradient(rgb(255, 255, 255), rgb(255, 204, 145));
   border: 2px solid rgb(211, 133, 88);

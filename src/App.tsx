@@ -1,3 +1,4 @@
+//developed by Abanoub Maher
 import React, { useState } from "react";
 import "./App.css";
 import QuestionCard from "./components/questionCard/QuestionCard";
@@ -18,7 +19,6 @@ function App() {
   const [questionNr, setQuestionNr] = useState(0);
   const [questions, setQuestions] = useState<QuestionState[]>([]);
   const [userAnswer, setUserAnswer] = useState("");
-  // const [userAnswers, setUserAnswers] = useState<AnswerObject[]>([]);
 
   const startTrivia = async () => {
     setStartQuiz(true);
@@ -30,7 +30,6 @@ function App() {
     setQuestions(newQuestions);
     setScore(0);
     setQuestionNr(0);
-    // setUserAnswers([]);
     setUserAnswer("");
     setLoading(false);
   };
@@ -57,17 +56,19 @@ function App() {
       ) : (
         startQuiz && (
           <>
-            <p>Score:{score}</p>
+            <h5>Score:{score}</h5>
             <QuestionCard
               questionNr={questionNr + 1}
               questionText={questions[questionNr]?.question}
               questionAnswers={questions[questionNr]?.answers}
-              // userAnswer={userAnswers ? userAnswers[questionNr] : undefined}
               callBack={checkAnswer}
               totalQuestions={TOTAL_QUESTIONS}
+              selectedAnswer={userAnswer}
             />
-            {userAnswer.length > 0 && questionNr !== TOTAL_QUESTIONS - 1 && (
-              <button onClick={nextQuestion}>Next</button>
+            {userAnswer.length > 0 && questionNr !== TOTAL_QUESTIONS && (
+              <button onClick={nextQuestion} className="nextBtn">
+                Next
+              </button>
             )}
           </>
         )
